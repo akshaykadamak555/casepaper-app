@@ -1,0 +1,36 @@
+.search-patient-container {
+  width: 100%;
+
+  .input-field {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem 0rem;
+    }
+    .add-patirnt-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .patient-add-form {
+      display: flex;
+      mat-card {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+}

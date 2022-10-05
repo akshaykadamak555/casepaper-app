@@ -1,0 +1,47 @@
+.search-patient-container {
+  display: flex;
+  width: 100%;
+
+  mat-card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .add-pt-icon {
+      cursor: pointer;
+    }
+  }
+
+  .input-field {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin: 2rem 0rem;
+    }
+    .add-patirnt-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+}
+
+
+.patient-search {
+  max-width: 20rem;
+  min-width: 20rem;
+}
+
+
+.patient-list {
+  margin-left: 2rem;
+  width: 58rem;
+}

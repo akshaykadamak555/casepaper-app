@@ -1,0 +1,124 @@
+{
+  "patient": [
+    {
+      "id": 1657378434144,
+      "firstName": "Akshay",
+      "lastName": "Kadam",
+      "dob": "11/28/1996",
+      "gender": "male",
+      "address": "pune",
+      "pincode": "415305",
+      "emailId": "akshaykadamak1996@gmail.com",
+      "phone": "7020710984"
+    },
+    {
+      "id": 1664890589550,
+      "firstName": "Alok",
+      "lastName": "Mourya",
+      "dob": "2022-10-08T18:30:00.000Z",
+      "gender": "Male",
+      "address": "Lucknow",
+      "pincode": "444444",
+      "emailId": "alok@gmail.com",
+      "phone": "7012765432"
+    },
+    {
+      "id": 1664891018618,
+      "firstName": "ak555",
+      "lastName": "ak",
+      "dob": "2022-10-13T18:30:00.000Z",
+      "gender": "Male",
+      "address": "pune",
+      "pincode": "411404",
+      "emailId": "akshaykadamak1996@gmail.com",
+      "phone": "7020710984"
+    },
+    {
+      "id": 1664893077596,
+      "firstName": "",
+      "lastName": "",
+      "dob": "",
+      "gender": "",
+      "address": "",
+      "pincode": "",
+      "emailId": "",
+      "phone": ""
+    },
+    {
+      "id": 1664972929232,
+      "firstName": "Akshay",
+      "lastName": "Kadam",
+      "dob": "2022-10-19T18:30:00.000Z",
+      "gender": "Male",
+      "address": "Pune",
+      "pincode": "411111",
+      "emailId": "ak@gmail.com",
+      "phone": "7020710984"
+    },
+    {
+      "id": 1664973038808,
+      "firstName": "test",
+      "lastName": "kadam",
+      "dob": "2022-10-18T18:30:00.000Z",
+      "gender": "Male",
+      "address": "test",
+      "pincode": "415305",
+      "emailId": "akshaykadamak1996@gmail.com",
+      "phone": "7020710984"
+    },
+    {
+      "id": 1664973215481,
+      "firstName": "test",
+      "lastName": "test",
+      "dob": "2022-10-18T18:30:00.000Z",
+      "gender": "Male",
+      "address": "pune",
+      "pincode": "415305",
+      "emailId": "akshaykadamak1996@gmail.com",
+      "phone": "7020710984"
+    },
+    {
+      "id": 1664973475142,
+      "firstName": "sunil",
+      "lastName": "shirshat",
+      "dob": "2022-10-01T18:30:00.000Z",
+      "gender": "Male",
+      "address": "pune",
+      "pincode": "3124234",
+      "emailId": "sunil@gmail.com",
+      "phone": "43535333645"
+    }
+  ],
+  "users": [
+    {
+      "id": 1657378434144,
+      "firstName": "Akshay",
+      "lastName": "Kadam",
+      "dob": "11/28/1996",
+      "gender": "male",
+      "password": "ak123",
+      "confirmPasswod": "ak123",
+      "userType": "admin"
+    },
+    {
+      "id": 1664891680149,
+      "firstName": "alok",
+      "lastName": "mourya",
+      "DOB": "1997-06-10T18:30:00.000Z",
+      "gender": "Male",
+      "password": "alok123",
+      "confirmPassword": "alok123",
+      "userType": "normal"
+    },
+    {
+      "id": 1664973916183,
+      "firstName": "akshay",
+      "lastName": "kadam",
+      "DOB": "1996-11-27T18:30:00.000Z",
+      "gender": "Male",
+      "password": "1234",
+      "confirmPassword": "11234",
+      "userType": "admin"
+    }
+  ]
+}

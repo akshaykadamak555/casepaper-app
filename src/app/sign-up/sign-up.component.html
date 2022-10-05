@@ -1,0 +1,64 @@
+<div class="signup-container">
+  <mat-card>
+    <mat-card-title>Add User</mat-card-title>
+    <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+      <div>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" />
+        </mat-form-field>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>Last name</mat-label>
+          <input matInput formControlName="lastName" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>DOB</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="DOB" />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender">
+            <mat-option *ngFor="let gender of genderList" [value]="gender">
+              {{ gender }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" />
+        </mat-form-field>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput formControlName="confirmPassword" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="input-field" appearance="outline">
+          <mat-label>User Type</mat-label>
+          <mat-select formControlName="userType">
+            <mat-option *ngFor="let user of userList" [value]="user">
+              {{ user }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="buttons">
+        <button mat-raised-button color="primary" type="submit">
+          <span>Sign Up</span>
+        </button>
+        <button mat-raised-button type="reset">Clear</button>
+      </div>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,29 @@
+.signup-container {
+  width: 100vh;
+
+
+  mat-card {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+    div {
+      display: flex;
+      width: 100%;
+      .input-field {
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+  }
+
+
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "patient": [
+    {
+      "id": 1657378434144,
+      "firstName": "Akshay",
+      "lastName": "Kadam",
+      "dob": "11/28/1996",
+      "gender": "male",
+      "address": "pune",
+      "pincode": "415305",
+      "email-id": "akshaykadamak1996@gmail.com",
+      "phone": "7020710984"
+    },
+    {
+      "id": 1664889919968,
+      "firstName": "alok",
+      "lastName": "mourya",
+      "dob": "1997-08-18T18:30:00.000Z",
+      "gender": "Male",
+      "address": "Lucknow",
+      "pincode": "411011",
+      "emailId": "alok@gmail.com",
+      "phone": "7012345678"
+    },
+    {
+      "id": 1664889963769,
+      "firstName": "test",
+      "lastName": "t",
+      "dob": "2022-10-11T18:30:00.000Z",
+      "gender": "Male",
+      "address": "t",
+      "pincode": "t",
+      "emailId": "t",
+      "phone": "t"
+    },
+    {
+      "id": 1664890072152,
+      "firstName": "teee",
+      "lastName": "tt",
+      "dob": "2022-10-19T18:30:00.000Z",
+      "gender": "Male",
+      "address": "tt",
+      "pincode": "tt",
+      "emailId": "tt",
+      "phone": "tt"
+    }
+  ],
+  "users": [
+    {
+      "id": 1657378434144,
+      "firstName": "Akshay",
+      "lastName": "Kadam",
+      "dob": "11/28/1996",
+      "gender": "male",
+      "password": "ak123",
+      "confirmPasswod": "ak123",
+      "userType": "admin"
+    }
+  ]
+}

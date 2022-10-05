@@ -1,0 +1,11 @@
+.patient-details-container {
+  width: 100vh;
+  mat-card{
+
+    .patient-details-container-content {
+      div {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
