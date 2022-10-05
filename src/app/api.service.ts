@@ -6,6 +6,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+
   apiUrl: string = 'http://localhost:3000/patient';
   addUserApiUrl: string = 'http://localhost:3000/users';
 
