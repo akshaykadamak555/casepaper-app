@@ -53,6 +53,8 @@
       [rowData]="rowData"
       [rowSelection]="'single'"
       (rowClicked)="onRowClicked($event)"
+      [overlayLoadingTemplate]="loadingTemplate"
+      [overlayNoRowsTemplate]="noRowsTemplate"
     ></ag-grid-angular>
     <!--     <mat-card class="list" *ngFor="let data of filteredPatientList">
       <div class="patient-data">

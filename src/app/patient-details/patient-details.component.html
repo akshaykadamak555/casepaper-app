@@ -1,16 +1,54 @@
 <div class="patient-details-container">
   <mat-card>
-    <mat-card-title> <div class="header">Patient Details</div> </mat-card-title>
+    <mat-card-title>
+      <div class="header">Create Casepaper</div>
+    </mat-card-title>
     <div class="patient-details-container-content">
-      <div>{{ selectedPatient?.id }}</div>
-      <div>{{ selectedPatient?.firstName }}</div>
-      <div>{{ selectedPatient?.lastName }}</div>
-      <div>{{ selectedPatient?.dob }}</div>
-      <div>{{ selectedPatient?.gender }}</div>
-      <div>{{ selectedPatient?.address }}</div>
-      <div>{{ selectedPatient?.pincode }}</div>
-      <div>{{ selectedPatient?.emailId }}</div>
-      <div>{{ selectedPatient?.phone }}</div>
+      <div class="patient-info">
+        <div class="titles">
+          <div>Patient ID:</div>
+          <div>Patient FirstName:</div>
+          <div>Patient LastName:</div>
+          <div>Patient DOB:</div>
+          <div>Patient Gender:</div>
+          <div>Patient Address:</div>
+          <div>Patient Pincode:</div>
+          <div>Patient EmailId:</div>
+          <div>Patient Phone:</div>
+        </div>
+
+        <div class="data">
+          <div>{{ selectedPatient?.id }}</div>
+          <div>{{ selectedPatient?.firstName }}</div>
+          <div>{{ selectedPatient?.lastName }}</div>
+          <div>{{ selectedPatient?.dob }}</div>
+          <div>{{ selectedPatient?.gender }}</div>
+          <div>{{ selectedPatient?.address }}</div>
+          <div>{{ selectedPatient?.pincode }}</div>
+          <div>{{ selectedPatient?.emailId }}</div>
+          <div>{{ selectedPatient?.phone }}</div>
+        </div>
+      </div>
+
+      <div class="other-info">
+        <mat-form-field appearance="outline">
+          <mat-label>Patient's Complaints</mat-label>
+          <textarea matInput [formControl]="patientComplaint"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="controls">
+      <button mat-raised-button color="primary" type="button" (click)="createCasepaper()">
+        <span>Create Casepaper</span>
+      </button>
+      <button
+        class="cancel-button"
+        color="secondary"
+        mat-raised-button
+        type="button"
+      >
+        Edit
+      </button>
     </div>
   </mat-card>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { ColDef } from 'ag-grid-community';
 import { AddPatientComponent } from '../add-patient/add-patient.component';
 import { ApiService } from '../api.service';
@@ -17,11 +18,19 @@ export class SearchPatientComponent implements OnInit {
   public patientList: Array<Patient> | undefined;
   public filteredPatientList: Array<Patient> | undefined = [{}];
   public flowStarted: boolean = false;
+  public noRowsTemplate: any;
+  public loadingTemplate: any;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
   constructor(
     public dialog: MatDialog,
     private formBuilder: FormBuilder,
-    private apiService: ApiService
-  ) {}
+    private apiService: ApiService,
+    private snackBar: MatSnackBar
+  ) {
+    this.loadingTemplate = `Searched patient will be displayed here`;
+    this.noRowsTemplate = `Searched patient will be displayed here`;
+  }
   ngOnInit(): void {
     this.createFormGroup();
   }
@@ -105,6 +114,15 @@ export class SearchPatientComponent implements OnInit {
     }
 
     this.rowData = this.filteredPatientList;
+
+    if (this.rowData.length === 0) {
+      this.loadingTemplate = `Patient Not Found`;
+      this.noRowsTemplate = `Patient Not Found`;
+      this.snackBar.open('Patient Not Found !', 'Ok', {
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+      });
+    }
     console.log('filtered patients array', this.filteredPatientList);
 
     /*     if(this.searchPatientForm.value.patientId.length > 1) {

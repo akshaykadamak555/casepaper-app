@@ -35,11 +35,18 @@
       <div>
         <mat-form-field class="input-field" appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput formControlName="password" />
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+          <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
+
         <mat-form-field class="input-field" appearance="outline">
           <mat-label>Confirm Password</mat-label>
-          <input matInput formControlName="confirmPassword" />
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="confirmPassword">
+          <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
       </div>
       <div>
@@ -54,7 +61,7 @@
       </div>
 
       <div class="buttons">
-        <button mat-raised-button color="primary" type="submit">
+        <button [disabled]="!signUpForm.valid" mat-raised-button color="primary" type="submit">
           <span>Sign Up</span>
         </button>
         <button mat-raised-button type="reset">Clear</button>

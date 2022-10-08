@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { FormBuilder, Validators } from '@angular/forms';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -25,13 +29,13 @@ export class AddPatientComponent implements OnInit {
 
   createFormGroup() {
     this.addPatientForm = this.formBuilder.group({
-      firstName: [''],
-      lastName: [''],
-      dob: [''],
-      gender: [''],
-      address: [''],
-      pincode: [''],
-      emailId: [''],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      dob: ['', Validators.required],
+      gender: ['', Validators.required],
+      address: ['', Validators.required],
+      pincode: ['', Validators.required],
+      emailId: ['', Validators.email],
       phone: [''],
     });
   }
@@ -47,16 +51,19 @@ export class AddPatientComponent implements OnInit {
       pincode: this.addPatientForm.value.pincode,
       emailId: this.addPatientForm.value.emailId,
       phone: this.addPatientForm.value.phone,
+      casePaper: []
     };
 
-    this.apiService.createPatient(addPatientPayload).subscribe((response) => {
-      console.log('response', response);
-      this.snackBar.open('Patient Added Sucessfully!', 'Ok',{
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-      })
-      this.getPatientsList();
-    });
+    if (this.addPatientForm.valid) {
+      this.apiService.createPatient(addPatientPayload).subscribe((response) => {
+        console.log('response', response);
+        this.snackBar.open('Patient Added Sucessfully!', 'Ok', {
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+        });
+        this.getPatientsList();
+      });
+    }
   }
 
   getPatientsList() {

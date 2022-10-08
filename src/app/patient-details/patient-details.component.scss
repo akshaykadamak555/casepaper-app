@@ -3,9 +3,41 @@
   mat-card{
 
     .patient-details-container-content {
-      div {
-        margin-top: 1rem;
+      display: flex;
+      width: 100vh;
+      .patient-info {
+        display: flex;
+
+        .titles {
+          flex: 1;
+          font-weight: 500;
+        }
+
+
+        .data{
+          flex: 1;
+        }
+        width: 100vh;
+        div {
+          margin-top: 1rem;
+        }
       }
+      .other-info {
+        width: 100vh;
+
+        .mat-form-field {
+            width: 90%;
+        }
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+
+    .cancel-button {
+      margin-left: 1rem;
     }
   }
 }

@@ -9,6 +9,7 @@ export class ApiService {
 
   apiUrl: string = 'http://localhost:3000/patient';
   addUserApiUrl: string = 'http://localhost:3000/users';
+  casepaperUrl: string = 'http://localhost:3000/casePaper';
 
   selectedPatient = new Subject();
 
@@ -28,7 +29,19 @@ export class ApiService {
     return this.http.post(this.addUserApiUrl, payload);
   }
 
+  updateUser(payload: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${payload.id}`, payload);
+  }
+
   getUsersList(): Observable<any> {
     return this.http.get(this.addUserApiUrl);
+  }
+
+  createCasePaper(payload: any): Observable<any> {
+    return this.http.post(this.casepaperUrl, payload);
+  }
+
+  getCasepaperDetails(): Observable<any> {
+    return this.http.get(this.casepaperUrl);
   }
 }

@@ -9,7 +9,29 @@
       "address": "pune",
       "pincode": "415305",
       "emailId": "akshaykadamak1996@gmail.com",
-      "phone": "7020710984"
+      "phone": "7020710984",
+      "casePaper": [
+        {
+          "id": 1665208140095,
+          "patientComplaints": null,
+          "date": "2022-10-08T05:49:00.095Z"
+        },
+        {
+          "id": 1665208260316,
+          "patientComplaints": "test",
+          "date": "2022-10-08T05:51:00.316Z"
+        },
+        {
+          "id": 1665209437249,
+          "patientComplaints": "testing",
+          "date": "2022-10-08T06:10:37.249Z"
+        },
+        {
+          "id": 1665211581743,
+          "patientComplaints": "testing",
+          "date": "2022-10-08T06:46:21.743Z"
+        }
+      ]
     },
     {
       "id": 1664890589550,
@@ -23,70 +45,79 @@
       "phone": "7012765432"
     },
     {
-      "id": 1664891018618,
-      "firstName": "ak555",
-      "lastName": "ak",
-      "dob": "2022-10-13T18:30:00.000Z",
-      "gender": "Male",
-      "address": "pune",
-      "pincode": "411404",
-      "emailId": "akshaykadamak1996@gmail.com",
-      "phone": "7020710984"
-    },
-    {
-      "id": 1664893077596,
-      "firstName": "",
-      "lastName": "",
-      "dob": "",
-      "gender": "",
-      "address": "",
-      "pincode": "",
-      "emailId": "",
-      "phone": ""
-    },
-    {
-      "id": 1664972929232,
-      "firstName": "Akshay",
-      "lastName": "Kadam",
-      "dob": "2022-10-19T18:30:00.000Z",
-      "gender": "Male",
-      "address": "Pune",
-      "pincode": "411111",
-      "emailId": "ak@gmail.com",
-      "phone": "7020710984"
-    },
-    {
-      "id": 1664973038808,
-      "firstName": "test",
-      "lastName": "kadam",
-      "dob": "2022-10-18T18:30:00.000Z",
+      "id": 1665209725460,
+      "firstName": "avinash",
+      "lastName": "kumar",
+      "dob": "2022-06-20T18:30:00.000Z",
       "gender": "Male",
       "address": "test",
-      "pincode": "415305",
-      "emailId": "akshaykadamak1996@gmail.com",
-      "phone": "7020710984"
+      "pincode": "344453",
+      "emailId": "test@gmail.com",
+      "phone": "87678686798"
     },
     {
-      "id": 1664973215481,
-      "firstName": "test",
-      "lastName": "test",
+      "id": 1665210264286,
+      "firstName": "testing",
+      "lastName": "testing",
+      "dob": "2022-07-13T18:30:00.000Z",
+      "gender": "Male",
+      "address": "testing",
+      "pincode": "123456",
+      "emailId": "testing@gmail.com",
+      "phone": "1234567890",
+      "casePaper": [
+        {
+          "id": 1665210309725,
+          "patientComplaints": "testing",
+          "date": "2022-10-08T06:25:09.725Z"
+        },
+        {
+          "id": 1665210351558,
+          "patientComplaints": "testing 4",
+          "date": "2022-10-08T06:25:51.558Z"
+        }
+      ]
+    },
+    {
+      "id": 1665212965562,
+      "firstName": "nilesh",
+      "lastName": "salve",
+      "dob": "2022-07-19T18:30:00.000Z",
+      "gender": "Male",
+      "address": "test",
+      "pincode": "754645",
+      "emailId": "nilesh@gmail.com",
+      "phone": "6546456456",
+      "casePaper": [
+        {
+          "id": 1665213244629,
+          "patientComplaints": null,
+          "date": "2022-10-08T07:14:04.629Z"
+        }
+      ]
+    },
+    {
+      "id": 1665213500871,
+      "firstName": "ankush",
+      "lastName": "k",
       "dob": "2022-10-18T18:30:00.000Z",
       "gender": "Male",
-      "address": "pune",
-      "pincode": "415305",
-      "emailId": "akshaykadamak1996@gmail.com",
-      "phone": "7020710984"
-    },
-    {
-      "id": 1664973475142,
-      "firstName": "sunil",
-      "lastName": "shirshat",
-      "dob": "2022-10-01T18:30:00.000Z",
-      "gender": "Male",
-      "address": "pune",
-      "pincode": "3124234",
-      "emailId": "sunil@gmail.com",
-      "phone": "43535333645"
+      "address": "t",
+      "pincode": "t",
+      "emailId": "ak@gmail.com",
+      "phone": "t",
+      "casePaper": [
+        {
+          "id": 1665213791152,
+          "patientComplaints": null,
+          "date": "2022-10-08T07:23:11.152Z"
+        },
+        {
+          "id": 1665213803145,
+          "patientComplaints": null,
+          "date": "2022-10-08T07:23:23.145Z"
+        }
+      ]
     }
   ],
   "users": [
@@ -101,24 +132,66 @@
       "userType": "admin"
     },
     {
-      "id": 1664891680149,
-      "firstName": "alok",
-      "lastName": "mourya",
-      "DOB": "1997-06-10T18:30:00.000Z",
+      "id": 1664990479194,
+      "firstName": "test",
+      "lastName": "test",
+      "DOB": "2022-10-13T18:30:00.000Z",
       "gender": "Male",
-      "password": "alok123",
-      "confirmPassword": "alok123",
-      "userType": "normal"
+      "password": "AK1234",
+      "confirmPassword": "AK1234",
+      "userType": "admin"
     },
     {
-      "id": 1664973916183,
-      "firstName": "akshay",
-      "lastName": "kadam",
-      "DOB": "1996-11-27T18:30:00.000Z",
+      "id": 1665213969842,
+      "firstName": "nilesh",
+      "lastName": "salve",
+      "DOB": "2001-01-12T18:30:00.000Z",
       "gender": "Male",
-      "password": "1234",
-      "confirmPassword": "11234",
+      "password": "123456",
+      "confirmPassword": "123456",
       "userType": "admin"
+    }
+  ],
+  "casePaper": [
+    {
+      "id": 1665211581743,
+      "patientId": 1657378434144,
+      "patientName": "Akshay Kadam",
+      "patientGender": "male",
+      "patientDOB": "11/28/1996",
+      "phone": "7020710984",
+      "patientComplaints": "testing",
+      "date": "2022-10-08T06:46:21.743Z"
+    },
+    {
+      "id": 1665213244629,
+      "patientId": 1665212965562,
+      "patientName": "nilesh salve",
+      "patientGender": "Male",
+      "patientDOB": "2022-07-19T18:30:00.000Z",
+      "phone": "6546456456",
+      "patientComplaints": null,
+      "date": "2022-10-08T07:14:04.629Z"
+    },
+    {
+      "id": 1665213791152,
+      "patientId": 1665213500871,
+      "patientName": "ankush k",
+      "patientGender": "Male",
+      "patientDOB": "2022-10-18T18:30:00.000Z",
+      "phone": "t",
+      "patientComplaints": null,
+      "date": "2022-10-08T07:23:11.152Z"
+    },
+    {
+      "id": 1665213803145,
+      "patientId": 1665213500871,
+      "patientName": "ankush k",
+      "patientGender": "Male",
+      "patientDOB": "2022-10-18T18:30:00.000Z",
+      "phone": "t",
+      "patientComplaints": null,
+      "date": "2022-10-08T07:23:23.145Z"
     }
   ]
 }

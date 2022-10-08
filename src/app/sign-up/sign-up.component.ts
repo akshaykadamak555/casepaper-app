@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { FormBuilder, Validators } from '@angular/forms';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss']
+  styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit {
   public signUpForm: any;
@@ -14,10 +18,13 @@ export class SignUpComponent implements OnInit {
   userList = ['admin', 'normal'];
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
+  hide = true;
 
-  constructor(private formBuilder: FormBuilder,
-              private apiService: ApiService,
-              private snackBar: MatSnackBar) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private apiService: ApiService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.createFormGroup();
@@ -25,13 +32,13 @@ export class SignUpComponent implements OnInit {
 
   createFormGroup() {
     this.signUpForm = this.formBuilder.group({
-      firstName: [''],
-      lastName: [''],
-      DOB: [''],
-      gender: [''],
-      password: [''],
-      confirmPassword: [''],
-      userType: [''],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      DOB: ['', Validators.required],
+      gender: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
+      userType: ['', Validators.required],
     });
   }
 
@@ -49,21 +56,28 @@ export class SignUpComponent implements OnInit {
       userType: this.signUpForm.value.userType,
     };
 
-    this.apiService.createUser(addUserPayload).subscribe(response => {
-      console.log('response', response);
-      this.getUsersList();
-      this.snackBar.open('User Added Sucessfully!', 'Ok',{
+    if (this.signUpForm.value.password !== this.signUpForm.value.confirmPassword) {
+      this.snackBar.open('Password does not match', 'Ok', {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
       });
-    })
-  }
+    }
 
+    if (this.signUpForm.valid && (this.signUpForm.value.password === this.signUpForm.value.confirmPassword)) {
+      this.apiService.createUser(addUserPayload).subscribe((response) => {
+        console.log('response', response);
+        this.getUsersList();
+        this.snackBar.open('User Added Sucessfully!', 'Ok', {
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+        });
+      });
+    }
+  }
 
   getUsersList() {
-    this.apiService.getUsersList().subscribe(response => {
+    this.apiService.getUsersList().subscribe((response) => {
       console.log('users list', response);
-    })
+    });
   }
-
 }
