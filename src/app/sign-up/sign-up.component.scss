@@ -1,6 +1,14 @@
 .signup-container {
   width: 100vh;
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .add-user-icon {
+      cursor: pointer;
+    }
+  }
 
   mat-card {
     width: 100%;

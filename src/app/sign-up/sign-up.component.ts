@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
 import { ApiService } from '../api.service';
+import { UsersListComponent } from '../users-list/users-list.component';
 
 @Component({
   selector: 'app-sign-up',
@@ -23,7 +25,8 @@ export class SignUpComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private apiService: ApiService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    public dialog: MatDialog,
   ) {}
 
   ngOnInit(): void {
@@ -80,4 +83,9 @@ export class SignUpComponent implements OnInit {
       console.log('users list', response);
     });
   }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(UsersListComponent);
+  }
+
 }

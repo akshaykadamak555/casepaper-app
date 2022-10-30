@@ -25,6 +25,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     PatientListComponent,
     SignUpComponent,
     HelpComponent,
-    PatientDetailsComponent
+    PatientDetailsComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,

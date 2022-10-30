@@ -9,7 +9,7 @@ export class ApiService {
 
   apiUrl: string = 'http://localhost:3000/patient';
   addUserApiUrl: string = 'http://localhost:3000/users';
-  casepaperUrl: string = 'http://localhost:3000/casePaper';
+  createCasepaperUrl: string = 'http://localhost:3000/casePaper';
 
   selectedPatient = new Subject();
 
@@ -38,10 +38,10 @@ export class ApiService {
   }
 
   createCasePaper(payload: any): Observable<any> {
-    return this.http.post(this.casepaperUrl, payload);
+    return this.http.post(this.createCasepaperUrl, payload);
   }
 
   getCasepaperDetails(): Observable<any> {
-    return this.http.get(this.casepaperUrl);
+    return this.http.get(this.createCasepaperUrl);
   }
 }

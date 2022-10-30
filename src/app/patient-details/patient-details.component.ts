@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-patient-details',
@@ -11,8 +16,11 @@ import { ApiService } from '../api.service';
 export class PatientDetailsComponent implements OnInit {
   selectedPatient: any;
   patientComplaint = new FormControl();
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
   constructor(private apiService: ApiService,
-    public dialog: MatDialog,) {
+    public dialog: MatDialog,
+    private snackBar: MatSnackBar) {
     console.log('called');
     this.apiService.selectedPatient.subscribe(response => {
       this.selectedPatient = response;
@@ -53,6 +61,10 @@ export class PatientDetailsComponent implements OnInit {
     };
     this.updatePatientInfo();
     this.apiService.createCasePaper(casePaperPayload).subscribe(response => {
+          this.snackBar.open('Casepaper Created Sucessfully!', 'Ok', {
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+        });
       console.log('cerate casepaper response', response);
     })
   }
